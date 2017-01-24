@@ -392,7 +392,7 @@ In this section we assume that the continuous basis of tenor $x$ is an \textit{a
 s_x(t) = (a + b t)e^{-c  t} + d
 \end{equation}
 
-Using the relationship between the continuous and the simple basis (\ref{SimpleContinuousBasis}), we can try to find the functional form of the simple basis. We have\footnote{here we are assuming that $\tau_x$ is constant.}:
+Using the relationship between the continuous and the simple basis (\ref{simple-vs-continuous}), we can try to find the functional form of the simple basis. We have\footnote{here we are assuming that $\tau_x$ is constant.}:
 \begin{equation}
 S_x(t) \approx \frac{\int_t^{t+\tau_x} s(u) \mathrm{d}u}{\tau_x} = \frac{\int_t^{t+\tau_x} [(a + b u)e^{-c  u} + d] \mathrm{d}u}{\tau_x}
 \end{equation}
@@ -401,7 +401,7 @@ Solving the integral, we have:
 S_x(t) \approx \frac{[(A(\tau_x) + B(\tau_x) t)e^{-c  t} + D(\tau_x)]}{\tau_x}
 \end{equation}
 where
-\begin{equation}\label{eq:integratedCoef}
+\begin{equation}\label{eq:integratedCoef2}
 \begin{split}
 A(\tau_x)&=-\left(\frac{a}{c}+ \frac{b}{c^{2}}+\frac{b}{c}\tau_x \right)e^{-c\tau_x}+\left(\frac{a}{c}+ \frac{b}{c^{2}}\right) \\
 B(\tau_x)&=\frac{b}{c}\left(1-e^{-c\tau_x}\right) \\
@@ -440,7 +440,7 @@ In this section we assume that the continuous basis of tenor $x$ is a polynomial
 s_x(t) = \sum_{i=0}^{n}(c_i \cdot t^i)
 \end{equation}
 
-Using the relationship between the continuous and the simple basis (\ref{SimpleContinuousBasis}), we can try to find the functional form of the simple basis. We have\footnote{here we are assuming that $\tau_x$ is constant.}:
+Using the relationship between the continuous and the simple basis (\ref{simple-vs-continuous}), we can try to find the functional form of the simple basis. We have\footnote{here we are assuming that $\tau_x$ is constant.}:
 \begin{equation}
 S_x(t) \approx \frac{\int_t^{t+\tau_x} s_x(u) \mathrm{d}u}{\tau_x} = \frac{\int_t^{t+\tau_x} [\sum_{i=0}^{n}(c_i \cdot t^i)] \mathrm{d}s}{\tau_x}
 \end{equation}
@@ -473,7 +473,7 @@ Here we parametrize the simple basis of tenor $x$ with a polynomial function of 
 S_x(t) = \sum_{i=0}^{n}(\mathbf{c_{S_x}}[i+1] \cdot t^i)
 \end{equation}
 
-Using the relationship between the continuous and the simple basis (\ref{SimpleContinuousBasis}), we can try to find the functional form of the continuous basis.
+Using the relationship between the continuous and the simple basis (\ref{simple-vs-continuous}), we can try to find the functional form of the continuous basis.
 \begin{equation}
 \int_t^{t+\tau_x} s_x(u) \mathrm{d}u \approx S_x(t) \tau_x= \tau_x \sum_{i=0}^{n}(\mathbf{c_{S_x}}[i+1] \cdot t^i) 
 \end{equation}
