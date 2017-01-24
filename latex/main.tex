@@ -84,9 +84,9 @@ The wide diffusion of bilateral collateral agreements and central clearing for i
 
 % note: pseudo-discount useful in legacy systems
 
-However, the calculation of forward rates from pseudo-discount factors has problems; the attempts to overcome them \cite{ametrano-mazzocchi, hagan, andreasen, ametrano-bianchetti-2, Burkard} have involved the introduction of synthetic values for $\{D_x(t), t<x \}$, research about suitable interpolation, careful selection of market instruments, dealing with negative rates, extreme slope changes in curves, and especially jumps (e.g., due to the turn-of-year effect). In the remainder of this paper, we will refer to the resulting pseudo-discount curves as \textit{legacy curves}.
+However, the calculation of forward rates from pseudo-discount factors has problems; the attempts to overcome them \cite{ametrano-mazzocchi, hagan, andreasen, ametrano-bianchetti-2, Burkard} have involved the introduction of synthetic values for $\{D_x(t), t<x \}$, research about suitable interpolation, minimization of spurious oscillations in the implied tenor basis curves, careful selection of market instruments, dealing with negative rates, extreme slope changes in curves, and especially jumps (e.g., due to the turn-of-year effect). In the remainder of this paper, we will refer to the resulting pseudo-discount curves as \textit{legacy curves}.
 
-For a while, we considered the possibility of bootstrapping forward rates directly. This would have solved some of the problems, but not all of them. Namely, jumps in the overnight curve translated to different amplitude jumps for longer tenor, each one to be estimated separately, and independent interpolation of forward curves still led to spurious oscillations in the implied tenor basis curves. Therefore we turned to the approach presented in the remainder of this paper, which provides an effective solution to these problems.
+For a while, we considered the possibility of bootstrapping forward rates directly. This would have solved some of the problems, but not all of them. Namely, jumps in the overnight curve translated to different amplitude jumps for longer tenor (each one to be estimated separately) and independent interpolation of forward curves still led to spurious oscillations in the implied tenor basis curves. Therefore we turned to the approach presented in the remainder of this paper, which provides an effective solution to these problems.
 
 
 
@@ -118,7 +118,7 @@ following Rebonato's notation \cite{rebonato}.
 \label{Empirical6MBasis}
 \end{figure}
 
-In figure~\ref{Empirical6MBasis}, the parameters $a,b,c,d$ of $S_{6M}(t)$ were calibrated to obtain a best fit of the rates $F_{6M}(t) = F_{6M}^{ON}(t) + S_{6M}(t)$ to market rates. The basis spreads calculated from the 6M and ON legacy curves are plotted as reference; as mentioned earlier, it can be seen that they present spurious oscillations due to their interpolations changing convexity at different times. The market instruments used for calibration were a subset of those based on the 6M Euribor index, namely, FRAs and interest-rate swaps. [expand]
+In figure~\ref{Empirical6MBasis}, the parameters $a,b,c,d$ of $S_{6M}(t)$ were calibrated to obtain a best fit of the rates $F_{6M}(t) = F_{6M}^{ON}(t) + S_{6M}(t)$ to market rates. The basis spreads calculated from the 6M and ON legacy curves are plotted only as reference as they were not used in calibration: as mentioned earlier, it can be seen that they present spurious oscillations due to their interpolations changing convexity at different times. The market instruments used for calibration were a subset of those based on the 6M Euribor index, namely, FRAs and interest-rate swaps. [expand]
 
 \begin{table}[p]
 \centering
